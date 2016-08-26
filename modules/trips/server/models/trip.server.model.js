@@ -16,6 +16,16 @@ var TripSchema = new Schema({
     required: 'Please fill Trip name',
     trim: true
   },
+  description: {
+    type: String,
+    default: '',
+    required: 'Please provide a description',
+    trim: true
+  },
+  destination: {
+    type: Schema.ObjectId,
+    ref: 'Destination'
+  },
   created: {
     type: Date,
     default: Date.now

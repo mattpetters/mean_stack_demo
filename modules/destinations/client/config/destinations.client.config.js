@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('trips')
+    .module('destinations')
     .run(menuConfig);
 
   menuConfig.$inject = ['Menus'];
@@ -10,22 +10,22 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'Trips',
-      state: 'trips',
+      title: 'Destinations',
+      state: 'destinations',
       type: 'dropdown',
       roles: ['*']
     });
 
     // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'trips', {
-      title: 'List Trips',
-      state: 'trips.list'
+    menuService.addSubMenuItem('topbar', 'destinations', {
+      title: 'List Destinations',
+      state: 'destinations.list'
     });
 
     // Add the dropdown create item
-    menuService.addSubMenuItem('topbar', 'trips', {
-      title: 'Create Trip',
-      state: 'trips.create',
+    menuService.addSubMenuItem('topbar', 'destinations', {
+      title: 'Create Destination',
+      state: 'destinations.create',
       roles: ['user']
     });
   }
