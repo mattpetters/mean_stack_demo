@@ -2,9 +2,9 @@
 
 module.exports = {
   app: {
-    title: 'QTG Demo App',
+    title: 'Travel Group demo app',
     description: 'Portal for managing trips',
-    keywords: 'quest travel group, pilgimmage, holy land, trip, travel, churches',
+    keywords: 'travel group, trip, travel',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
   },
   port: process.env.PORT || 3000,
