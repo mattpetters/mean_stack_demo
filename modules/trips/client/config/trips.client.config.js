@@ -26,7 +26,7 @@
     menuService.addSubMenuItem('topbar', 'trips', {
       title: 'Create Trip',
       state: 'trips.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 }());

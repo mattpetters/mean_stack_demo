@@ -32,7 +32,7 @@
           tripResolve: newTrip
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['admin'],
           pageTitle: 'Trips Create'
         }
       })

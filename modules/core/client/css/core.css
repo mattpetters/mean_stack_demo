@@ -62,4 +62,12 @@ a:hover .header-profile-image {
     background-color: #d1d1d1; color:#fff;
 }
 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form, .navbar-inverse {
+   
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
 

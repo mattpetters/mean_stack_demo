@@ -6,7 +6,8 @@
           <p class="lead">
             Welcome to the portal.
           </p>
-          <p>Please <a href="/authentication/signin">sign in</a> or <a href="/authentication/signup">sign up</a> to access your trip information.</p>
+          <p ng-hide="authentication.user">Please <a href="/authentication/signin">sign in</a> or <a href="/authentication/signup">sign up</a> to access your trip information.</p>
+          <p ng-show="authentication.user">Here you can find information about your upcoming <a href="/trips">trips</a> and any outstanding <a href="/bills">bills</a>.</p>
         </div>
       </div>
       <br>
