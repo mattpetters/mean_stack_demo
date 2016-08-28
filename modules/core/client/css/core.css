@@ -47,7 +47,7 @@ a:hover .header-profile-image {
     z-index:;
     position:absolute;
     background: url("http://az616578.vo.msecnd.net/files/2016/04/03/6359524176194484221446729975_travel-01.jpg") no-repeat center center fixed;
-    -webkit-filter: blur(5px);
+    -webkit-filter: blur(20px);
     -moz-filter: blur(20px);
     -o-filter: blur(20px);
     -ms-filter: blur(20px);
