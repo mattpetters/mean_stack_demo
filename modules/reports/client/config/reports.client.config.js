@@ -13,7 +13,7 @@
       title: 'Reports',
       state: 'reports',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['admin']
     });
 
     // Add the dropdown list item
@@ -26,7 +26,7 @@
     menuService.addSubMenuItem('topbar', 'reports', {
       title: 'Create Report',
       state: 'reports.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 }());

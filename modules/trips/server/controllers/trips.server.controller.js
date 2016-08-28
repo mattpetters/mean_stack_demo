@@ -14,7 +14,7 @@ var path = require('path'),
  */
 exports.create = function(req, res) {
   var trip = new Trip(req.body);
-  trip.user = req.user;
+  trip.users = req.user;
 
   trip.save(function(err) {
     if (err) {

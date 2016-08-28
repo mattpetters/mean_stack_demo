@@ -16,14 +16,6 @@ var DestinationSchema = new Schema({
     required: 'Please fill Destination name',
     trim: true
   },
-  created: {
-    type: Date,
-    default: Date.now
-  },
-  user: {
-    type: Schema.ObjectId,
-    ref: 'User'
-  }
 });
 
 mongoose.model('Destination', DestinationSchema);
