@@ -12,13 +12,8 @@
       <br>
   </div>
   <div class="row">
-    <div class="col-md-6 text-center" ng-class="{'pio-block': hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false">
-      <h2 ng-class="{'pio-block': hover1}"><strong>About Us</strong></h2>
-      <p><a target="_blank" href="#">Tripzilla</a> is a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id itaque molestias soluta vero voluptatibus. Cumque dolores molestiae nostrum nulla odit recusandae reiciendis! Dicta explicabo illum nihil nulla numquam quas tempore?</p>
-    </div>
-    <div class="col-md-6 text-center" ng-class="{'pio-block': hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false">
-      <h2 ng-class="{'pio-block': hover2}"><strong>Our Sites</strong></h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores at debitis, delectus deserunt dolores dolorum eveniet fuga impedit, ipsum iste magnam molestiae quibusdam quis ratione sed sequi temporibus, ullam?</p>
+  <home-block info="about" render="renderHtml(about.body)"></home-block>
+    <home-block info="sites" render="renderHtml(sites.body)"></home-block>
     </div>
   </div>
   <br>
