@@ -26,7 +26,7 @@
     menuService.addSubMenuItem('topbar', 'bills', {
       title: 'Create Bill',
       state: 'bills.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 }());

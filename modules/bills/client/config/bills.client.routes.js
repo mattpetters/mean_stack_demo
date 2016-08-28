@@ -32,7 +32,7 @@
           billResolve: newBill
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['admin'],
           pageTitle: 'Bills Create'
         }
       })
