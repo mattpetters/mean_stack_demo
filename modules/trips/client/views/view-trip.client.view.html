@@ -8,12 +8,12 @@
   <div class="list-group">
     <h3>Passengers</h3>
     <a ng-repeat="passenger in vm.trip.passengers"
-       class="list-group-item">
+       class="list-group-item col-md-1 text-center">
       <img class="header-profile-image" ng-src="{{passenger.profileImageURL}}" alt="">
       <h4 class="list-group-item-heading" ng-bind="passenger.displayName"></h4>
     </a>
   </div>
- <div class="pull-right"> <!--ng-show="vm.trip.isCurrentUserAdmin"-->
+ <div class="pull-right"  ng-show="vm.trip.isCurrentUserAdmin">
     <a class="btn btn-primary"
        ui-sref="trips.edit({ tripId: vm.trip._id })">
       <i class="glyphicon glyphicon-edit"></i>
@@ -22,14 +22,9 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
-  <small>
-    <em class="text-muted">
-      Created on
+  <small class="col-md-12">
+    <em class="text-muted"><br>Created on
       <span ng-bind="vm.trip.created | date:'mediumDate'"></span>
-      by
-      <span ng-if="vm.trip.user"
-            ng-bind="vm.trip.user.displayName"></span>
-      <span ng-if="!vm.trip.user">Deleted User</span>
     </em>
   </small>
   <p class="lead" ng-bind="vm.trip.content"></p>

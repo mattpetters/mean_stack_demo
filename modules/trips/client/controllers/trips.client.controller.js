@@ -19,13 +19,13 @@
     vm.remove = remove;
     vm.save = save;
 
-      Users.query(function (data) {
-          vm.users = data;
-      });
+
 
     // //query for users and set to scope
       vm.loadUsers = function($query) {
-          console.log(vm.trip.passengers);
+          Users.query(function (data) {
+              vm.users = data;
+          });
           return vm.users;
       };
 

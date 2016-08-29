@@ -46,7 +46,7 @@
           tripResolve: getTrip
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['admin'],
           pageTitle: 'Edit Trip {{ tripResolve.name }}'
         }
       })
