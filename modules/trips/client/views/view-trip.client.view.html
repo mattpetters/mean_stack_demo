@@ -7,13 +7,13 @@
   </div>
   <div class="list-group">
     <h3>Passengers</h3>
-    <a ng-repeat="passenger in vm.passengers"
+    <a ng-repeat="passenger in vm.trip.passengers"
        class="list-group-item">
-      <h4 class="list-group-item-heading" ng-bind="passenger.name"></h4>
+      <img class="header-profile-image" ng-src="{{passenger.profileImageURL}}" alt="">
+      <h4 class="list-group-item-heading" ng-bind="passenger.displayName"></h4>
     </a>
   </div>
-  <div class="pull-right"
-       ng-show="vm.trip.isCurrentUserOwner">
+ <div class="pull-right"> <!--ng-show="vm.trip.isCurrentUserAdmin"-->
     <a class="btn btn-primary"
        ui-sref="trips.edit({ tripId: vm.trip._id })">
       <i class="glyphicon glyphicon-edit"></i>

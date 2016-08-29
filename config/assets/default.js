@@ -5,7 +5,8 @@ module.exports = {
     lib: {
       css: [
         'public/theme/css/bootstrap.css',
-        'public/theme/css/style.css'
+        'public/theme/css/style.css',
+         'public/lib/ng-tags-input/ng-tags-input.min.css'
       ],
       js: [
         'public/lib/angular/angular.js',
@@ -16,13 +17,14 @@ module.exports = {
         'public/lib/angular-ui-utils/ui-utils.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
         'public/lib/angular-file-upload/angular-file-upload.js',
-        'public/lib/owasp-password-strength-test/owasp-password-strength-test.js'
+        'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
+          'public/lib/ng-tags-input/ng-tags-input.min.js'
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']
     },
     css: [
       'modules/*/client/css/*.css',
-      'public/theme/**/css/*.css'
+      'public/theme/**/css/*.css',
     ],
     less: [
       'modules/*/client/less/*.less'

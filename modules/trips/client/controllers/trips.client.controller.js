@@ -6,17 +6,33 @@
     .module('trips')
     .controller('TripsController', TripsController);
 
-  TripsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'tripResolve'];
+  TripsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'tripResolve', 'Users'];
 
-  function TripsController ($scope, $state, $window, Authentication, trip) {
+  function TripsController ($scope, $state, $window, Authentication, trip, Users) {
     var vm = this;
 
     vm.authentication = Authentication;
     vm.trip = trip;
     vm.error = null;
     vm.form = {};
+    vm.passengersToAdd = [];
     vm.remove = remove;
     vm.save = save;
+
+      Users.query(function (data) {
+          vm.users = data;
+      });
+
+    // //query for users and set to scope
+      vm.loadUsers = function($query) {
+          console.log(vm.trip.passengers);
+          return vm.users;
+      };
+
+    //TODO: Write function that matches all the display names in passengersToAdd to user objects and adds those users to the vm.trip.passengers array
+
+
+
 
     // Remove existing Trip
     function remove() {

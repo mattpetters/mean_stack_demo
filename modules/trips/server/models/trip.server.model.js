@@ -26,15 +26,18 @@ var TripSchema = new Schema({
     type: Schema.ObjectId,
     ref: 'Destination'
   },
+  user: {
+    type: Schema.ObjectId,
+    ref: 'User'
+  },
   created: {
     type: Date,
     default: Date.now
   },
-  passengers: [ { type: Schema.ObjectId, ref:'User' } ],
-  user: {
-    type: Schema.ObjectId,
-    ref: 'User'
-  }
+  passengers: [{
+      type: Schema.ObjectId,
+      ref:'User'
+  }]
 });
 
 mongoose.model('Trip', TripSchema);

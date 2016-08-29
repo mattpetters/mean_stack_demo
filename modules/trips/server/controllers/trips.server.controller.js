@@ -36,7 +36,8 @@ exports.read = function(req, res) {
 
   // Add a custom field to the Article, for determining if the current User is the "owner".
   // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Article model.
-  trip.isCurrentUserOwner = req.user && trip.user && trip.user._id.toString() === req.user._id.toString();
+  trip.isCurrentUserAdmin = req.user.roles.indexOf('admin') === -1;
+  //trip.isCurrentUserOwner = req.user && trip.user && trip.user._id.toString() === req.user._id.toString();
 
   res.jsonp(trip);
 };
@@ -81,7 +82,8 @@ exports.delete = function(req, res) {
  * List of Trips
  */
 exports.list = function(req, res) {
-  Trip.find().sort('-created').populate('user', 'displayName').exec(function(err, trips) {
+    var populateQuery = [{path:'passengers'}, {path:'user', select:'displayName'}];
+  Trip.find().sort('-created').populate(populateQuery).exec(function(err, trips) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -103,7 +105,9 @@ exports.tripByID = function(req, res, next, id) {
     });
   }
 
-  Trip.findById(id).populate('user', 'displayName').exec(function (err, trip) {
+  var populateQuery = [{path:'passengers'}, {path:'user', select:'displayName'}];
+
+  Trip.findById(id).populate(populateQuery).exec(function (err, trip) {
     if (err) {
       return next(err);
     } else if (!trip) {
