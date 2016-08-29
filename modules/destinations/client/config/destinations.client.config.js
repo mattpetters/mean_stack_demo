@@ -13,7 +13,7 @@
       title: 'Destinations',
       state: 'destinations',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['admin']
     });
 
     // Add the dropdown list item
@@ -26,7 +26,7 @@
     menuService.addSubMenuItem('topbar', 'destinations', {
       title: 'Create Destination',
       state: 'destinations.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 }());

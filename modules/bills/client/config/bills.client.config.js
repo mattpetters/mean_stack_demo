@@ -13,7 +13,7 @@
       title: 'Bills',
       state: 'bills',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['user']
     });
 
     // Add the dropdown list item
@@ -26,7 +26,7 @@
     menuService.addSubMenuItem('topbar', 'bills', {
       title: 'Create Bill',
       state: 'bills.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 }());

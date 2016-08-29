@@ -5085,11 +5085,11 @@ tbody.collapse.in {
 }
 
 .navbar-inverse {
-  background-color: #222;
+  background-color: #f58720;
   border-color: #090909;
 }
 .navbar-inverse .navbar-brand {
-  color: #9d9d9d;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
   color: #fff;
@@ -5099,7 +5099,7 @@ tbody.collapse.in {
   color: #9d9d9d;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #9d9d9d;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
   color: #fff;

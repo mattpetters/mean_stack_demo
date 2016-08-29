@@ -13,7 +13,7 @@
       title: 'Trips',
       state: 'trips',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['user']
     });
 
     // Add the dropdown list item
@@ -26,7 +26,7 @@
     menuService.addSubMenuItem('topbar', 'trips', {
       title: 'Create Trip',
       state: 'trips.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 }());

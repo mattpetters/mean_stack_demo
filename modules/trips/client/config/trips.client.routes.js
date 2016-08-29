@@ -20,6 +20,7 @@
         controller: 'TripsListController',
         controllerAs: 'vm',
         data: {
+          roles:['user','admin'],
           pageTitle: 'Trips List'
         }
       })
@@ -32,7 +33,7 @@
           tripResolve: newTrip
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['admin'],
           pageTitle: 'Trips Create'
         }
       })
@@ -45,7 +46,7 @@
           tripResolve: getTrip
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['admin'],
           pageTitle: 'Edit Trip {{ tripResolve.name }}'
         }
       })
@@ -58,6 +59,7 @@
           tripResolve: getTrip
         },
         data: {
+          roles: ['user', 'admin'],
           pageTitle: 'Trip {{ tripResolve.name }}'
         }
       });

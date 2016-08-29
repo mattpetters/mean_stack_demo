@@ -9,9 +9,6 @@
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="trip.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="trip.user" ng-bind="trip.user.displayName"></span>
-        <span ng-if="!trip.user">Deleted User</span>
       </small>
       <h4 class="list-group-item-heading" ng-bind="trip.name"></h4>
     </a>

@@ -29,7 +29,7 @@
         controller: 'TravelDocumentsController',
         controllerAs: 'vm',
         resolve: {
-          travel-documentResolve: newTravelDocument
+          traveldocumentResolve: newTravelDocument
         },
         data: {
           roles: ['user', 'admin'],
@@ -42,7 +42,7 @@
         controller: 'TravelDocumentsController',
         controllerAs: 'vm',
         resolve: {
-          travel-documentResolve: getTravelDocument
+          traveldocumentResolve: getTravelDocument
         },
         data: {
           roles: ['user', 'admin'],
@@ -55,7 +55,7 @@
         controller: 'TravelDocumentsController',
         controllerAs: 'vm',
         resolve: {
-          travel-documentResolve: getTravelDocument
+          traveldocumentResolve: getTravelDocument
         },
         data: {
           pageTitle: 'Travel document {{ travel-documentResolve.name }}'

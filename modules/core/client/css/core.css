@@ -35,3 +35,39 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+
+#main-splash::before {
+    content:"";
+    top:0;
+    overflow:;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:;
+    position:absolute;
+    background: url("http://az616578.vo.msecnd.net/files/2016/04/03/6359524176194484221446729975_travel-01.jpg") no-repeat center center fixed;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+}
+
+#main-splash {
+    position:relative;
+}
+
+.pio-block {
+    background-color: #d1d1d1; color:#fff;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form, .navbar-inverse {
+   
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+
