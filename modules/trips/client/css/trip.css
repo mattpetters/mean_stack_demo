@@ -1,0 +1,9 @@
+#tripDescription {
+    background-color: #fff1e5;
+    height: 300px;
+    overflow: scroll;
+}
+
+#tripDescriptionText {
+    padding-top: 10px;
+}

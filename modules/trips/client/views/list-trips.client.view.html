@@ -7,8 +7,7 @@
        ui-sref="trips.view({ tripId: trip._id })"
        class="list-group-item">
       <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="trip.created | date:'mediumDate'"></span>
+        <span ng-bind="trip.departureDate | date:'mediumDate'"></span> to <span ng-bind="trip.returnDate | date:'mediumDate'"></span>
       </small>
       <h4 class="list-group-item-heading" ng-bind="trip.name"></h4>
     </a>

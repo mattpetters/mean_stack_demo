@@ -19,6 +19,16 @@
             <p class="help-block error-text" ng-message="required">Trip description is required.</p>
           </div>
         </div>
+        <!--TODO:ADD DESTINATION TO TRIP-->
+        <!--Preferred implementation here will use maps API to allow admin to select location and then pull name and coordinates from selection-->
+        <!--Temporary implementation involves creating destination manually-->
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="destination" type="text" ng-model="vm.trip.destination" id="destination" class="form-control" placeholder="Destination" required>
+          <div ng-messages="vm.form.tripForm.destination.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Destination name is required. This app is backed by Google Maps, so enter a query like you would in Google Maps.</p>
+          </div>
+        </div>
         <!--TODO:ADD PASSENGERS TO TRIP-->
         <div class="form-group">
           <label class="control-label" for="passengers">Passengers</label>

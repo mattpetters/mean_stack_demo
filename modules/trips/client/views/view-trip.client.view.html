@@ -1,27 +1,38 @@
 <section>
   <div class="page-header">
     <h1 ng-bind="vm.trip.name"></h1>
+    <small>{{vm.trip.departureDate | date}}</small> to <small>{{vm.trip.returnDate | date }} </small>
   </div>
-  <div>
-    <h2 ng-bind="vm.trip.description"></h2>
+
+  <div class="col-md-6" id="tripDescription">
+    <p id="tripDescriptionText" ng-bind="vm.trip.description"></p>
   </div>
-  <div class="list-group">
-    <h3>Passengers</h3>
-    <a ng-repeat="passenger in vm.trip.passengers"
-       class="list-group-item col-md-1 text-center">
-      <img class="header-profile-image" ng-src="{{passenger.profileImageURL}}" alt="">
-      <h4 class="list-group-item-heading" ng-bind="passenger.displayName"></h4>
-    </a>
+  <div class="col-md-6 text-center" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZuWrgAkYg_osIaudR4IDrMbxfwnm0x7M">
+    <ng-map center="{{vm.trip.destination}}" zoom="10">
+      <marker position="{{vm.trip.destination}}"></marker>
+    </ng-map>
+    <p>{{vm.trip.destination}}</p>
   </div>
- <div class="pull-right"  ng-show="vm.trip.isCurrentUserAdmin">
-    <a class="btn btn-primary"
-       ui-sref="trips.edit({ tripId: vm.trip._id })">
-      <i class="glyphicon glyphicon-edit"></i>
-    </a>
-    <a class="btn btn-primary" ng-click="vm.remove()">
-      <i class="glyphicon glyphicon-trash"></i>
-    </a>
+  <div class="col-md-12">
+    <div class="list-group">
+      <h3>Passengers</h3>
+      <a ng-repeat="passenger in vm.trip.passengers"
+         class="list-group-item col-md-1 text-center">
+        <img class="header-profile-image" ng-src="{{passenger.profileImageURL}}" alt="">
+        <h4 class="list-group-item-heading" ng-bind="passenger.displayName"></h4>
+      </a>
+    </div>
+    <div class="pull-right"  ng-show="vm.trip.isCurrentUserAdmin">
+      <a class="btn btn-primary"
+         ui-sref="trips.edit({ tripId: vm.trip._id })">
+        <i class="glyphicon glyphicon-edit"></i>
+      </a>
+      <a class="btn btn-primary" ng-click="vm.remove()">
+        <i class="glyphicon glyphicon-trash"></i>
+      </a>
+    </div>
   </div>
+
   <small class="col-md-12">
     <em class="text-muted"><br>Created on
       <span ng-bind="vm.trip.created | date:'mediumDate'"></span>

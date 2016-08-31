@@ -16,6 +16,8 @@ var TripSchema = new Schema({
     required: 'Please fill Trip name',
     trim: true
   },
+  departureDate: { type: Date, default: Date.now },
+  returnDate: { type: Date, default: Date.now },
   description: {
     type: String,
     default: '',
@@ -23,8 +25,9 @@ var TripSchema = new Schema({
     trim: true
   },
   destination: {
-    type: Schema.ObjectId,
-    ref: 'Destination'
+    type: String,
+    default: 'Atlanta, GA',
+    required: 'Please write a destination'
   },
   user: {
     type: Schema.ObjectId,

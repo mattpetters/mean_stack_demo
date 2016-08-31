@@ -6,16 +6,15 @@
     .module('trips')
     .controller('TripsController', TripsController);
 
-  TripsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'tripResolve', 'Users'];
+  TripsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'tripResolve', 'Users', 'DestinationsService'];
 
-  function TripsController ($scope, $state, $window, Authentication, trip, Users) {
+  function TripsController ($scope, $state, $window, Authentication, trip, Users, DestinationsService) {
     var vm = this;
 
     vm.authentication = Authentication;
     vm.trip = trip;
     vm.error = null;
     vm.form = {};
-    vm.passengersToAdd = [];
     vm.remove = remove;
     vm.save = save;
 
