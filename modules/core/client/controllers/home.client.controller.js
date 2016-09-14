@@ -9,8 +9,8 @@ angular.module('core').controller('HomeController', ['$scope', '$sce', 'Authenti
       $scope.adminUser = Authentication.user.roles.indexOf('admin') !== -1;
     }
     console.log(Authentication.user);
-    $scope.about = { title: 'About Us', body:'<a target="_blank" href="#">Tripzilla</a> is a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id itaque molestias soluta vero voluptatibus. Cumque dolores molestiae nostrum nulla odit recusandae reiciendis! Dicta explicabo illum nihil nulla numquam quas tempore?' };
-    $scope.sites = { title:'Our Sites', body:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores at debitis, delectus deserunt dolores dolorum e' };
+    $scope.about = { title: 'About Us', body:'<a target="_blank" href="#">Tripzilla</a> is an artifical platform for booking fake trips for imaginary customers. We allow our false users to have the greatest overall experiences in their whole non-lives.' };
+    $scope.sites = { title:'Our Sites', body:'Our sites don\'t exist, but if they did, they\'d be great and would be linked to right here.'};
     $scope.renderHtml = function (html) {
         return $sce.trustAsHtml(html);
     };
