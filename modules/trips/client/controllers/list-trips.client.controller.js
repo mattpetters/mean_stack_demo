@@ -12,21 +12,25 @@
     vm.authentication = Authentication;
 
     var trips = TripsService.query();
-    console.log(vm.authentication.user.id);
-    //return only the trips which have the current user as a passenger
-    for (var trip in trips) {
-      for (var passenger in trip.passengers) {
-        console.log(passenger._id);
-        if (vm.authentication.user.id !== passenger._id) {
-           var index = vm.trips.indexOf(trip);
+
+    trips.$promise.then(function(){
+      console.log(vm.authentication.user._id + " is the auth user id");
+      //return only the trips which have the current user as a passenger
+      for (var trip in trips) {
+        console.log(trip + " is the trip");
+        for (var passenger in trip.passengers) {
+          console.log(passenger + " is the passenger");
+          console.log(passenger._id + " is the passenger ID");
+          if (vm.authentication.user._id !== passenger._id) {
+            var index = vm.trips.indexOf(trip);
             if (index > -1) {
               console.log("Got to the splicing part");
-             trips.splice(index, 1);
+              trips.splice(index, 1);
+            }
           }
         }
-    }
-  }
-
-  vm.trips = trips;
+      }
+      vm.trips = trips;
+    });
 }
 })();
