@@ -10,10 +10,12 @@
   function TripsListController(TripsService, Authentication) {
     var vm = this;
     vm.authentication = Authentication;
+    var trips;
+    //http://blog.ninja-squad.com/2015/05/28/angularjs-promises/
+    TripsService.query().then(function(response) {
+      var trips = response.data;
+    });
 
-    var trips = TripsService.query();
-
-    trips.$promise.then(function(){
       console.log(vm.authentication.user._id + " is the auth user id");
       //return only the trips which have the current user as a passenger
       for (var trip in trips) {
@@ -31,6 +33,5 @@
         }
       }
       vm.trips = trips;
-    });
 }
 })();
