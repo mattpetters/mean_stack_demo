@@ -3,7 +3,7 @@
     <h1>Trips</h1>
   </div>
   <div class="list-group">
-    <a ng-repeat="trip in vm.trips"
+    <a ng-repeat="trip in vm.trips |  filter:{ passengers : { _id : vm.userId } }"
        ui-sref="trips.view({ tripId: trip._id })"
        class="list-group-item">
       <small class="list-group-item-text">
